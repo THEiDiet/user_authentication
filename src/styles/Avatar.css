@@ -1,0 +1,85 @@
+.inputLabel{
+    padding: 10px;
+    background: #000;
+    display: inline-block;
+    width: 10px;
+}
+.inputFile{
+    appearance: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.uploadPhoto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.uploadPhoto>button{
+    margin: 10px 0;
+    width: 100%;
+}
+.canvasContainer {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 250px;
+    position: relative;
+}
+.camera{
+    max-width: inherit;
+    height: auto;
+    position: relative;
+}
+
+.screenShootHidden{
+    display: none;
+}
+.canvas {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+}
+.canvas-bg{
+    width: 250px;
+    height:250px;
+    display:block;
+    background: #a4a4a4;
+    border-radius: 50%;
+}
+.canvas-image{
+    min-width: 250px;
+    max-height:250px;
+    background-size: cover;
+}
+
+.fileInput{
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+.fileInputLabel{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px dashed #1890ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1890ff;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all .4s;
+}
+.fileInputLabel:hover{
+    background: #eaeaea;
+}
+.labelHidden{
+    display: none;
+}

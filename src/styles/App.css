@@ -1,0 +1,35 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+button{
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+}
+.greeting{
+  display: flex;
+}
+.greeting a:first-child{
+  border-radius: 5px 0 0 5px;
+}
+.greeting a:last-child{
+  border-radius: 0 5px  5px 0;
+  border-left: none;
+}
+.link{
+  display: inline-block;
+  padding: 15px 10px;
+  border: 1px solid #1890ff;
+  transition: all .4s;
+}
+.link:hover{
+  background: #eaeaea;
+}
+.link a {
+  text-decoration: none;
+}
