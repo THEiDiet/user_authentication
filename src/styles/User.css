@@ -14,16 +14,27 @@
     padding: 15px;
     border-radius: 5px;
     font-size: 16px;
-
+    max-height: 550px;
 }
 .user__page{
     flex: 1 0 60%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    flex-direction: column;
     font-size: 20px;
     font-weight: 500;
     color: #a4a4a4;
+}
+.user__page>div:first-child{
+    align-self: flex-end;
+}
+.user__page>div:last-child{
+    flex: 1 0 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .user>div{
     display: flex;
