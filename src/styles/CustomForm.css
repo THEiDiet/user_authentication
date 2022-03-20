@@ -1,9 +1,14 @@
-@import '~antd/dist/antd.css';
-
+@import '~antd/dist/antd.min.css';
+.antInput{
+    background: transparent !important;
+}
+.antInput > .ant-select-selector{
+    background: transparent !important;
+}
 
 .formWrapper{
     padding: 15px !important;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
 .formContainer {

@@ -1,41 +1,37 @@
-import axios from "axios";
-import {getAppId} from "../helpers/gettingAppId";
+import {instance} from './config'
+import {Requests} from '../enum'
 
-const instance = axios.create({
-    baseURL: 'https://testtask.softorium.pro/',
-    headers: {
-        'X-APP-ID': getAppId()
-    }
-})
-
-export const authUser = (data,callback) => {
-    return instance.post('/signup', JSON.stringify(data),{
+export const userAPI = {
+  authUser: (data, callback) =>
+    instance
+      .post(Requests.SignUp, JSON.stringify(data), {
         headers: {
-            'Content-Type': 'application/json',
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(res => {
+        if (res.status === 200) {
+          callback(res)
         }
-    }).then(res => {
-        if(res.status === 200){
-            callback(res)
+      })
+      .catch(e => {
+        console.warn(e.response.data.detail.map(el => `Errors: ${el.msg}`).join('\n'))
+      }),
+  signIn: data =>
+    instance
+      .post(Requests.SignIn, data)
+      .then(res => {
+        if (res.status === 200) {
+          return res
         }
-    }).catch((e)=>{
-
-        alert(e.response.data.detail.map(el=> 'Errors: '+el.msg).join('\n'))
-    })
-}
-export const signIn = (data) => {
-    return instance.post('/signin', data)
-        .then(res=>{
-            if(res.status === 200){
-                return res
-            }
-    }).catch((e)=>{
-            alert(e.response.data.detail)
-        })
-}
-export const me = async (token) => {
-    return  await instance.get('/users/me',{
-        headers:{
-            'Authorization':token
-        }
+      })
+      .catch(e => {
+        alert(e.response.data.detail)
+      }),
+  me: async token =>
+    await instance.get(Requests.Me, {
+      headers: {
+        Authorization: token,
+      },
     })
 }

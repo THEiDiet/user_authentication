@@ -1,0 +1,1 @@
+export { getZodiac } from './getZodiac'

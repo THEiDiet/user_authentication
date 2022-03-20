@@ -1,4 +1,9 @@
-.user__container{
+.container {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+.user__container {
     padding: 30px 0;
     display: flex;
     width: 1200px;
@@ -6,48 +11,53 @@
     min-height: 100vh;
     justify-content: space-between;
 }
-.user{
+
+.user {
     display: flex;
     flex-direction: column;
     width: 300px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
     padding: 15px;
     border-radius: 5px;
     font-size: 16px;
     max-height: 550px;
 }
-.user__page{
+
+.user__page {
     flex: 1 0 60%;
     display: flex;
-
-    /*align-items: center;*/
-    /*justify-content: center;*/
     flex-direction: column;
     font-size: 20px;
     font-weight: 500;
     color: #a4a4a4;
 }
-.user__page>div:first-child{
+
+.user__page > div:first-child {
     align-self: flex-end;
 }
-.user__page>div:last-child{
+
+.user__page > div:last-child {
     flex: 1 0 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.user>div{
+
+.user > div {
     display: flex;
     justify-content: space-between;
     padding: 5px 0;
 }
-.user>div>*:first-child{
+
+.user > div > *:first-child {
     font-weight: 500;
 }
-.user>div>*:last-child{
+
+.user > div > *:last-child {
     color: #414141;
 }
-.user__enabled{
+
+.user__enabled {
     width: 15px;
     height: 15px;
     background: #8ec568;
@@ -55,34 +65,42 @@
     border-radius: 50%;
     align-self: center;
 }
-.user__img{
+
+.user__img {
     border-radius: 50%;
 }
-.user__name{
+
+.user__name {
     font-size: 20px;
     font-weight: 500;
 }
-.user__b-day{
+
+.user__b-day {
     color: #414141;
 }
-.user__phone{
+
+.user__phone {
 
 }
-.user__email{
+
+.user__email {
 
 }
-.user__block{
+
+.user__block {
     display: flex;
     justify-content: space-between;
 }
-.user__created{
+
+.user__created {
     display: flex;
     flex-direction: column;
 }
 
-.user__time{
+.user__time {
 
 }
-.user__b-day{
+
+.user__b-day {
 
 }

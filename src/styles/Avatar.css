@@ -67,12 +67,10 @@
     height: 250px;
     position: absolute;
     border-radius: 50%;
-    background: #ffffff;
-    border: 2px dashed #1890ff;
+    border: 2px dashed ;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1890ff;
     font-weight: 600;
     text-transform: uppercase;
     transition: all .4s;
