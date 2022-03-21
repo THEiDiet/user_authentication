@@ -36,8 +36,6 @@ const CustomForm = ({callback, changeTheme}) => {
               mask="+7 (999) 999-99-99"
               name="phone"
               placeholder="Phone number"
-              className="antInput"
-              style={styles}
               onChange={(e) => {
                 const value = e.target.value || ''
                 setFieldValue('phone', value)

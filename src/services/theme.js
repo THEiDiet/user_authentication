@@ -9,7 +9,7 @@ export const theme = {
     shadow: presetPalettes.grey[6],
     formBg: presetPalettes.blue[2],
     color:'#171717',
-    secondColor:'#494949 !important'
+    secondColor:'#494949'
   },
   dark: {
     accent: presetPalettes.cyan[3],

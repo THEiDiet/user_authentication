@@ -47,14 +47,14 @@ const App = () => {
       setCurrentTheme(theme.light)
       localStorage.setItem(StorageKey.Theme,JSON.stringify(theme.light))
     }
-  }, [])
+  }, [user])
   return (
     <Context.Provider value={ctxValue}>
       <div className="App">
         <Routes>
           <Route path={Paths.Home} element={<User user={user} changeTheme={changeTheme}/>}/>
           <Route path={Paths.SignUp} element={<SignUp setUser={setUserData} changeTheme={changeTheme}/>}/>
-          <Route path={Paths.SignIn} element={<SignIn/>}/>
+          <Route path={Paths.SignIn} element={<SignIn setUser={setUserData}/>}/>
           <Route path={Paths.Auth} element={<Greeting/>}/>
           <Route path={Paths.NotFound} element={<NotFound/>}/>
         </Routes>

@@ -1,10 +1,11 @@
-import {useContext, useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import {CustomForm, UploadImage} from '../components'
 import {userAPI} from '../api/api'
-import {StorageKey} from '../enum'
+import {Paths, StorageKey} from '../enum'
 import {Context} from '../services'
 import '../styles/App.css'
 import '../styles/CustomForm.css'
+import {Navigate} from 'react-router-dom'
 
 const SignUp = ({setUser, changeTheme}) => {
   const [base64, setBase64] = useState()
@@ -38,7 +39,9 @@ const SignUp = ({setUser, changeTheme}) => {
   useEffect(() => {
     setBase64(base64)
   }, [base64])
-  return (
+  return ctx.token ?(
+    <Navigate to={Paths.Home}/>
+  ):(
     <div className="signUp" style={{background: ctx.theme.main}}>
       <div className="formWrapper" style={{background: ctx.theme.second}}>
         <UploadImage setImage={setBase64}/>
