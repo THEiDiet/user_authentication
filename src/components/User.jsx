@@ -17,7 +17,7 @@ export const User = ({user, changeTheme}) => {
     navigate(Paths.Auth, {replace: true})
   }
   useEffect(() => {
-    setZodiac(getZodiac(user.birthday))
+    user && setZodiac(getZodiac(user.birthday))
   }, [user])
   return !user
     ? <Navigate to={Paths.Auth}/>
